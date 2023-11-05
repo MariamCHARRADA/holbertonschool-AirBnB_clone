@@ -28,7 +28,9 @@ class BaseModel():
         """method that returns a dictionary containing all
           keys/values of __dict__ of the instance"""
         dic = {}
+        for key, value in (self.__dict__.items()):
+            if (isinstance(value, datetime.datetime)):
+                value = value.isoformat()
+            dict[key] = value
         dic['__class__'] = self.__class__.__name__
-        dic['created_at'] = self.created_at.isoformat()
-        dic['updated_at'] = self.updated_at.isoformat()
         return dic
