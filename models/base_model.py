@@ -13,13 +13,16 @@ class BaseModel():
         self.created_at = datetime.datetime.now()
         self.updated_at = datetime.datetime.now()
     # __str__ method
+
     def __str__(self):
         """__str__ method"""
         return f"[{BaseModel.__name__}] ({self.id}) {self.__dict__}"
     # save method
+
     def save(self):
         """save method"""
         self.updated_at = datetime.datetime.now()
+
     def to_dict(self):
         """to_dict"""
         dic = {}
@@ -29,5 +32,3 @@ class BaseModel():
             dict[key] = value
         dic['__class__'] = self.__class__.__name__
         return dic
-        
-            
