@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Console Base module"""
-import uuid
 import datetime
+import uuid
 
 
 class BaseModel:
@@ -18,13 +18,9 @@ class BaseModel:
                     value = datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 setattr(self, key, value)
 
-    # __str__ method
-
     def __str__(self):
         """method that returns the string representation of an instance"""
         return f"[{BaseModel.__name__}] ({self.id}) {self.__dict__}"
-
-    # save method
 
     def save(self):
         """method that updates the public instance attribute
