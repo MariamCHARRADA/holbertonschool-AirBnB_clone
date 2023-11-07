@@ -9,4 +9,4 @@ class State(BaseModel):
 
     def __str__(self):
         """method that return string repesentation of an instance"""
-        return f"[{state.__name__}] ({self.id}) {self.__dict__}"
+        return f"[{State.__name__}] ({self.id}) {self.__dict__}"
