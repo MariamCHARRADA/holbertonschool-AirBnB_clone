@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+"""file storage"""
 import json
 import os
 
 
 class FileStorage:
+    """serialization and deserialization"""
+
     __file_path = "storage_file.json"
     __objects = {}
 
