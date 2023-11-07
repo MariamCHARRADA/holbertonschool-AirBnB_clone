@@ -6,9 +6,10 @@ import datetime
 
 
 class TestBaseModel(unittest.TestCase):
-    """test cases for the basemodel class"""
+    """test cases for the Basemodel class"""
 
     def test_instance_creation(self):
+        """test that an instance is created appropriately"""
         instance = BaseModel()
         self.assertIsInstance(instance, BaseModel)
         self.assertIsInstance(instance.id, str)
@@ -16,6 +17,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(instance.updated_at, datetime.datetime)
 
     def test_str_representation(self):
+        """test that the string representation is correct"""
         instance = BaseModel()
         str_repr = str(instance)
         self.assertIn("[BaseModel]", str_repr)
@@ -23,12 +25,13 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(str(instance.__dict__), str_repr)
 
     def test_save_method(self):
+        """test that the save method updates the updated_at attribute"""
         instance = BaseModel()
         original_updated_at = instance.updated_at
         instance.save()
         self.assertNotEqual(original_updated_at, instance.updated_at)
 
-    def test_to_dict(self):
+    def test_to_dict_method(self):
         """test that the to_dict method returns a dictionary"""
         instance = BaseModel()
         instance_dict = instance.to_dict()
