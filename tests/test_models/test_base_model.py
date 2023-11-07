@@ -6,6 +6,8 @@ import datetime
 
 
 class TestBaseModel(unittest.TestCase):
+    """test cases for the basemodel class"""
+
     def test_instance_creation(self):
         instance = BaseModel()
         self.assertIsInstance(instance, BaseModel)
@@ -26,7 +28,8 @@ class TestBaseModel(unittest.TestCase):
         instance.save()
         self.assertNotEqual(original_updated_at, instance.updated_at)
 
-    def test_to_dict_method(self):
+    def test_to_dict(self):
+        """test that the to_dict method returns a dictionary"""
         instance = BaseModel()
         instance_dict = instance.to_dict()
         self.assertIsInstance(instance_dict, dict)
