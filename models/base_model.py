@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Console Base module"""
 import datetime
+import models
 import uuid
 
 
@@ -18,6 +19,7 @@ class BaseModel:
                     value = datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
                     setattr(self, key, value)
+        models.storage.new
 
     def __str__(self):
         """method that returns the string representation of an instance"""
@@ -27,6 +29,7 @@ class BaseModel:
         """method that updates the public instance attribute
         updated_at with the current datetime"""
         self.updated_at = datetime.datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """method that returns a dictionary containing all
