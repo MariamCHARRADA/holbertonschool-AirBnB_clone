@@ -16,11 +16,12 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     value = datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
-                setattr(self, key, value)
+                if key != "__class__":
+                    setattr(self, key, value)
 
     def __str__(self):
         """method that returns the string representation of an instance"""
-        return f"[{BaseModel.__name__}] ({self.id}) {self.__dict__}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         """method that updates the public instance attribute
