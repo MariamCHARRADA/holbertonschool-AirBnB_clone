@@ -31,6 +31,23 @@ class TestBaseModel(unittest.TestCase):
         instance.save()
         self.assertNotEqual(original_updated_at, instance.updated_at)
 
+    def test_multiple_instances(self):
+        """Test saving and reloading multiple BaseModel instances"""
+        model1 = BaseModel()
+        model1.name = "Model 1"
+        model1.save()
+
+        model2 = BaseModel()
+        model2.name = "Model 2"
+        model2.save()
+
+        self.storage.reload()
+        reloaded_model1 = self.storage.all()["BaseModel." + model1.id]
+        reloaded_model2 = self.storage.all()["BaseModel." + model2.id]
+
+        self.assertEqual(reloaded_model1.name, "Model 1")
+        self.assertEqual(reloaded_model2.name, "Model 2")
+
     def test_to_dict_method(self):
         """test that the to_dict method returns a dictionary"""
         instance = BaseModel()
