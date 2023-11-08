@@ -18,6 +18,10 @@ class HBNBCommand(cmd.Cmd):
         """EOF command to exit the program"""
         return True
 
+    def emptyline(self):
+        """Do nothing on empty line"""
+        pass
+
     def help_quit(self):
         """Help information for the quit command"""
         print("Quit command to exit the program\n")
