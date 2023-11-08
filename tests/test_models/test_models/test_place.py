@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """unittest for the Place"""
-
 from models.place import Place
 from datetime import datetime
 import unittest

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """unittest for State"""
-
 from models.state import State
 import unittest
 from datetime import datetime
