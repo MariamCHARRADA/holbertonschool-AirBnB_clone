@@ -3,7 +3,6 @@
 from models.base_model import BaseModel
 from models.user import User
 import unittest
-import datetime
 
 
 class Test_User(unittest.TestCase):
