@@ -20,7 +20,7 @@ class BaseModel:
                 if key != "__class__":
                     setattr(self, key, value)
         else:
-            models.storage.new()
+            models.storage.new(self)
 
     def __str__(self):
         """method that returns the string representation of an instance"""
