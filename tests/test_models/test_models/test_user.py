@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """unittest for the User"""
-from models.base_model import BaseModel
 from models.user import User
 import unittest
 from datetime import datetime
