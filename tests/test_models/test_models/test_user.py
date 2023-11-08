@@ -3,6 +3,8 @@
 from models.base_model import BaseModel
 from models.user import User
 import unittest
+from datetime import datetime
+import uuid
 
 
 class Test_User(unittest.TestCase):
