@@ -25,3 +25,9 @@ class HBNBCommand(cmd.Cmd):
     def help_quit(self):
         """Help information for the quit command"""
         print("Quit command to exit the program\n")
+
+
+
+
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
