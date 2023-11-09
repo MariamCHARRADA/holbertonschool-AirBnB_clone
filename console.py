@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains the entry point of the command interpreter"""
 import cmd
+from models.base_model import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
@@ -23,6 +24,20 @@ class HBNBCommand(cmd.Cmd):
     def help_quit(self):
         """Help information for the quit command"""
         print("Quit command to exit the program\n")
+        
+    def do_create(self, arg):
+        """Creates a new instance of BaseModel, saves it
+        and prints its ID
+        """
+        if not arg:
+            print("** class name missing **")
+            return
+        try:
+            new_instance = BaseModel()
+            new_instance.save()
+            print(new_instance.id)
+        except NameError:
+            print("** class doesn't exist **")
 
 
 if __name__ == '__main__':
