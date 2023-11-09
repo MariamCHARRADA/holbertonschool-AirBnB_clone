@@ -95,7 +95,8 @@ class HBNBCommand(cmd.Cmd):
         else:
             instances = storage.all()
             for instance in instances.values():
-                print(str(instance))
+                if instance.__class__.__name__ == arg:
+                    print(str(instance))
 
     def do_update(self, arg):
         """Updates an instance based on the class name
