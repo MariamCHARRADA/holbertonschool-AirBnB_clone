@@ -2,6 +2,7 @@
 """This module contains the entry point of the command interpreter"""
 import cmd
 from models.base_model import BaseModel
+from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -57,6 +58,22 @@ class HBNBCommand(cmd.Cmd):
         except NameError:
             print("** class doesn't exist **")
 
+    def do_destroy(self, arg):
+        """Deletes an instance based on the class name and id"""
+        if not arg:
+            print("** class name missing **")
+            return
+        try:
+            instance = eval(arg)()
+            if instance:
+                del instance
+                storage.save()
+            else:
+                print("** no instance found **")
+        except ValueError:
+            print("** instance id missing **")
+        except NameError:
+            print("** class doesn't exist **")
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
