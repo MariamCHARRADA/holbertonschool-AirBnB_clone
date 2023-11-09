@@ -1,32 +1,21 @@
 #!/usr/bin/python3
 """This module contains the entry point of the command interpreter"""
-import cmd
-from models.base_model import BaseModel
-<<<<<<< HEAD
-from models import storage
-=======
-from models.user import User
-from models.state import State
-from models.city import City
 from models.amenity import Amenity
+from models.base_model import BaseModel
+import cmd
+from models.city import City
 from models.place import Place
 from models.review import Review
->>>>>>> a49439a17d54cf8cd9f41afc672a7cab505e83c3
+from models.state import State
+from models import storage
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
     """Class HBNBCommand that inherits from cmd.Cmd"""
 
     prompt = "(hbnb) "
-    __classes = {
-        "BaseModel",
-        "User",
-        "State",
-        "City",
-        "Amenity",
-        "Place",
-        "Review"
-    }
+    __classes = {"BaseModel", "User", "State", "City", "Amenity", "Place", "Review"}
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -92,7 +81,7 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
         except NameError:
             print("** class doesn't exist **")
-            
+
         def all(self, arg):
             """Prints all string representation of all
             instances based or not on the class name
