@@ -82,7 +82,7 @@ class HBNBCommand(cmd.Cmd):
         except NameError:
             print("** class doesn't exist **")
 
-        def all(self, arg):
+        def do_all(self, arg):
             """Prints all string representation of all
             instances based or not on the class name
             """
