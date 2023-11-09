@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
             if not arg:
                 print("** class doesn't exist **")
                 return
-            try:
+            else:
                 instances = eval(arg)()
                 for instance in instances:
                     print("{}".format(instance))
