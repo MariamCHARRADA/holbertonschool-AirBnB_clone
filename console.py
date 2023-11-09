@@ -48,13 +48,14 @@ class HBNBCommand(cmd.Cmd):
             return
         try:
             instance = eval(arg)()
-            print("{}".format(instance))
+            if instance:
+                print("{}".format(instance))
+            else:
+                print("** no instance found **")
+        except ValueError:
+            print("** instance id missing **")
         except NameError:
             print("** class doesn't exist **")
-        except AttributeError:
-            print("** instance id missing **")
-        except KeyError:
-            print("** no instance found **")
 
 
 if __name__ == "__main__":
