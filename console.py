@@ -92,6 +92,19 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
         except NameError:
             print("** class doesn't exist **")
+            
+        def all(self, arg):
+            """Prints all string representation of all
+            instances based or not on the class name
+            """
+            if not arg:
+                print("** class doesn't exist **")
+                return
+            try:
+                instances = eval(arg)()
+                for instance in instances:
+                    print("{}".format(instance))
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
