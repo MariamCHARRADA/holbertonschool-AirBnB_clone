@@ -42,7 +42,8 @@ class HBNBCommand(cmd.Cmd):
         elif arg not in HBNBCommand.classes:
             print("** class doesn't exist **")
         else:
-            new_instance = HBNBCommand.classes.get(arg)()
+            class_dict = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity, "City": City, "Place": Place, "Review": Review, "State": State}
+            new_instance = HBNBCommand.__class__.get(arg)()
             storage.save()
             print(new_instance.id)
 
