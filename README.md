@@ -131,7 +131,7 @@ All the attributes of the created model will be in your screen.
 
 use: 
 
-```
+```bash
 (hbnb) help
 ```
 For a list of usable commands, to exit press Ctrl+D or type the command quit.
@@ -140,7 +140,7 @@ For a list of usable commands, to exit press Ctrl+D or type the command quit.
 
 The console can also be used in non-interactive mode:
 
-```
+```bash
 $ echo "create User" | ./console.py
 $ echo "help" | ./console.py
 ```
