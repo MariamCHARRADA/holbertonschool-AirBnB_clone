@@ -40,11 +40,11 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        if arg not in self.classes:
+        if arg not in HBNBCommand.classes:
             print("** class doesn't exist **")
         else:
             new_instance = eval(arg)()
-            new_instance.save()
+            storage.save()
             print(new_instance.id)
 
     def do_show(self, arg):
