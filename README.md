@@ -1,12 +1,8 @@
-<h1 align="center">
-	<img alt="aitBnB" src="https://cdn.icon-icons.com/icons2/836/PNG/512/Airbnb_icon-icons.com_66791.png" height="30"/> AirBnB clone - The console
-</h1>
-<p align="center">
-	<b><i>HOLBERTON SCHOOL AirBnB clone - The console</i></b><br>
-</p>
-<p align="center">
- <img alt="aitBnB" src= "hbnb.png"height="200" width="400"/> 
-</p>
+# [AirBnB_clone](https://via.placeholder.com/10/00b48a?text=+)
+
+<img align="center" src="https://i.ibb.co/d5N85Nh/hbnb.png">
+
+# [AirBnB clone - The console](https://via.placeholder.com/10/00b48a?text=+)
 
 ### [description of the project](https://via.placeholder.com/10/00b48a?text=+)
 # 
