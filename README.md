@@ -32,7 +32,8 @@ The console or command interpreter
 # [Prerequisites](https://via.placeholder.com/10/00b48a?text=+)
 
 Python3.4+ has to be installed if you desire to use the console:
-```
+
+```bash
 sudo apt-get install python3
 ```
 
@@ -40,7 +41,7 @@ sudo apt-get install python3
 
 To have access to the console use the following command:
 
-```
+```bash
 git clone git@github.com:amaalyy/holbertonschool-AirBnB_clone.git; cd AirBnB_clone
 ```
 
@@ -48,7 +49,7 @@ git clone git@github.com:amaalyy/holbertonschool-AirBnB_clone.git; cd AirBnB_clo
 
 If you want to execute the console use:
 
-```
+```bash
 python3 console.py
 ```
 or
@@ -60,7 +61,7 @@ or
 
 If you want to personalize the classes and execute unit tests to confirm that your changes haven't modify the functionality use:
 
-```
+```bash
 python3 -m unittest discover tests
 ```
 
@@ -110,19 +111,19 @@ python3 -m unittest discover tests
 ## [How to start it](https://via.placeholder.com/10/00b48a?text=+)
 
 ### [Interactive Mode](https://via.placeholder.com/10/00b48a?text=+)
-```
+```bash
 $ ./console.py
 ```
 
 Now you are on interactive mode and you will see the prompt `(hbnb)`
 input a command:
 
-```
+```bash
 (hbnb) create User
 ```
 the id of the created model will be visible in the standard output, if you do:
 
-```
+```bash
 (hbnb) show User [id]
 ```
 
