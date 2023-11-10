@@ -117,7 +117,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             instance = inst_dict[inst_key]
             setattr(instance, args[2], args[3].replace('"', ''))
-            instance.save()
+            storage.save()
 
 
 if __name__ == "__main__":
