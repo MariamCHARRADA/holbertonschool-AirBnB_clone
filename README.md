@@ -147,8 +147,7 @@ $ echo "help" | ./console.py
 The program will create a file called: `file.json` whenever you create a new model, it'll be store in the top folder.
 
 
-[Authors](https://via.placeholder.com/10/00b48a?text=+)
-```
--[@MariamCHARRADA](https://www.github.com/MariamCHARRADA)
+## [Authors](https://via.placeholder.com/10/00b48a?text=+)
+
+- [@MariamCHARRADA](https://www.github.com/MariamCHARRADA)
 - [@amaalyy](https://www.github.com/amaalyy)
-```
