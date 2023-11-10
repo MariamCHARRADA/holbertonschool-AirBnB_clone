@@ -100,22 +100,23 @@ class HBNBCommand(cmd.Cmd):
         and id by adding or updating attribute
         """
         args = arg.split(" ")
-        instance_key = args[0] + "." + args[1]
-        if not arg:
+        inst_key = args[0] + "." + args[1]
+        inst_dict = storage.all()
+        if not args[0]:
             print("** class name missing **")
         elif args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
-        elif instance_key not in storage.all():
+        elif inst_key not in inst_dict:
             print("** no instance found **")
         elif len(args) < 3:
             print("** attribute name missing **")
         elif len(args) < 4:
             print("** value missing **")
         else:
-            instance = storage.all()[instance_key]
-            setattr(instance, args[2], args[3])
+            instance = inst_dict[inst_key]
+            setattr(instance, args[2], eval(args[3]))
             instance.save()
 
 
