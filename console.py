@@ -33,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
         """Help information for the quit command"""
         print("Quit command to exit the program\n")
 
-    def do_create(self, arg=None):
+    def do_create(self, arg):
         """Creates a new instance of BaseModel, saves it
         and prints its ID
         """
@@ -42,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
         elif arg not in HBNBCommand.classes:
             print("** class doesn't exist **")
         else:
-            new_instance = eval(arg)()
+            new_instance = self.classes.get(arg)()
             storage.save()
             print(new_instance.id)
 
