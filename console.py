@@ -40,12 +40,13 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        try:
+        if arg is not "BaseModel":
+            print("** class doesn't exist **")
+        else:
             new_instance = BaseModel()
             new_instance.save()
             print(new_instance.id)
-        except NameError:
-            print("** class doesn't exist **")
+            
 
     def do_show(self, arg):
         """Prints the string representation of an instance
