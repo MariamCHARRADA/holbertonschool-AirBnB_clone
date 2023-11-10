@@ -79,8 +79,9 @@ class HBNBCommand(cmd.Cmd):
             inst_key = args[0] + "." + args[1]
             if inst_key not in inst_dict:
                 print("** no instance found **")
-            del inst_dict[args[0] + "." + args[1]]
-            storage.save()
+            else:
+                del inst_dict[inst_key]
+                storage.save()
 
     def do_all(self, arg):
         """Prints all string representation of all
