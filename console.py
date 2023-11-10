@@ -15,7 +15,7 @@ class HBNBCommand(cmd.Cmd):
     """Class HBNBCommand that inherits from cmd.Cmd"""
 
     prompt = "(hbnb) "
-    classes = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+    classes = {"BaseModel", "User", "State", "City", "Amenity", "Place", "Review"}
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -56,7 +56,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split(" ")
         instances = storage.all()
         instance_key = args[0] + "." + args[1]
-        
+
         if args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
         elif len(args) < 2:
