@@ -116,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
         else:
             instance = inst_dict[inst_key]
-            setattr(instance, args[2], eval(args[3]))
+            setattr(instance, args[2], args[3].replace('"', ''))
             instance.save()
 
 
