@@ -6,7 +6,7 @@
 
 
 
-### [description of the project](https://via.placeholder.com/10/00b48a?text=+)
+## [description of the project](https://via.placeholder.com/10/00b48a?text=+)
 # 
 
 This project is the first step towards building a full web application: the AirBnB clone.
