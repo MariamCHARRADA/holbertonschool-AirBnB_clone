@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img alt="aitBnB" src="https://cdn.icon-icons.com/icons2/836/PNG/512/Airbnb_icon-icons.com_66791.png" height="30"/> AirBnB clone - The console
+	<img alt="aitBnB" src="https://cdn.icon-icons.com/icons2/836/PNG/512/Airbnb_icon-icons.com_66791.png" height="40"/> AirBnB clone - The console
 </h1>
 
 <img align="center" src="https://i.ibb.co/d5N85Nh/hbnb.png">
