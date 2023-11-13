@@ -6,7 +6,7 @@ from datetime import datetime
 import uuid
 
 
-class Test_User(unittest.TestCase):
+class Test_City(unittest.TestCase):
     """Class Test for City"""
 
     def test_state_id(self):
