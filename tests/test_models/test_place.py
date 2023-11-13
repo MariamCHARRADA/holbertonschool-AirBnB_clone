@@ -7,7 +7,7 @@ import uuid
 
 
 class Test_Place(unittest.TestCase):
-    """Class Test for Place"""
+    """Test cases for Place"""
 
     def test_city_id(self):
         self.assertEqual(str, type(Place.city_id))
