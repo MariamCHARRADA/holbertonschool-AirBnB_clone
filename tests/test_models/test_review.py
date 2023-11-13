@@ -6,7 +6,7 @@ import unittest
 import uuid
 
 
-class Test_User(unittest.TestCase):
+class Test_Review(unittest.TestCase):
     """Class TEst for Review"""
 
     def test_place_id(self):
