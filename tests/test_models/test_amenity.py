@@ -6,6 +6,6 @@ import unittest
 import uuid
 
 class Test_Amenity(unittest.TestCase):
-    """Class test for Amenity"""
+    """test cases for Amenity"""
     def test_name_is_public_str(self):
         self.assertEqual(str, type(Amenity.name))
