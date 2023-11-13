@@ -2,8 +2,6 @@
 """unittest for the User"""
 from models.user import User
 import unittest
-from datetime import datetime
-import uuid
 
 
 class Test_User(unittest.TestCase):

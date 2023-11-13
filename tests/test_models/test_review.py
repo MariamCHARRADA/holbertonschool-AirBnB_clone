@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """unittest for the review"""
 from models.review import Review
-from datetime import datetime
 import unittest
-import uuid
 
 
 class Test_Review(unittest.TestCase):

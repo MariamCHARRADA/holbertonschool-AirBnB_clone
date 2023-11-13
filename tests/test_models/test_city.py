@@ -2,8 +2,6 @@
 """unittest for the City"""
 from models.city import City
 import unittest
-from datetime import datetime
-import uuid
 
 
 class Test_City(unittest.TestCase):

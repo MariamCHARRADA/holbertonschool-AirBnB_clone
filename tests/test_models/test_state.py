@@ -2,8 +2,6 @@
 """unittest for State"""
 from models.state import State
 import unittest
-from datetime import datetime
-import uuid
 
 
 class Test_State(unittest.TestCase):
