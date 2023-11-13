@@ -7,7 +7,7 @@ import uuid
 
 
 class Test_State(unittest.TestCase):
-    """Class Test for State"""
+    """Test cases for State"""
 
     def test_name_is_public_str(self):
         self.assertEqual(str, type(State.name))
