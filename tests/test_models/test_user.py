@@ -7,7 +7,7 @@ import uuid
 
 
 class Test_User(unittest.TestCase):
-    """Class Test for User"""
+    """Test cases for User"""
 
     def test_email_is_public_str(self):
         self.assertEqual(str, type(User.email))
