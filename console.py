@@ -81,16 +81,15 @@ class HBNBCommand(cmd.Cmd):
         inst_dict = storage.all()
         if not arg:
             print("** class name missing **")
-        elif len(args) == 1:
-            print("** instance id missing **")
         elif args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
+        elif len(args) == 1:
+            print("** instance id missing **")
         elif len(args) == 2:
-            inst_key = args[0] + "." + args[1]
-            if inst_key not in inst_dict:
+            if  args[0] + "." + args[1] not in inst_dict:
                 print("** no instance found **")
             else:
-                del inst_dict[inst_key]
+                del inst_dict[ args[0] + "." + args[1]]
                 storage.save()
 
     def do_all(self, arg):
