@@ -9,6 +9,7 @@ from models.review import Review
 from models.state import State
 from models import storage
 from models.user import User
+from datetime import datetime
 
 
 class HBNBCommand(cmd.Cmd):
@@ -124,6 +125,8 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
         else:
             instance = inst_dict[args[0] + "." + args[1]]
+            instance.updated_at = datetime.now()
+
             setattr(instance, args[2], args[3].replace('"', ''))
             storage.save()
 
