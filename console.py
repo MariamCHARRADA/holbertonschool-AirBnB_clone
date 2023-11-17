@@ -16,14 +16,15 @@ class HBNBCommand(cmd.Cmd):
     """Class HBNBCommand that inherits from cmd.Cmd"""
 
     prompt = "(hbnb) "
-    classes = [
+    classes = {
         "BaseModel",
         "User",
         "State",
         "City",
         "Amenity",
         "Place",
-        "Review"]
+        "Review"
+        }
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -52,8 +53,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             new_instance = eval(args[0])()
-            storage.save()
             print(new_instance.id)
+            storage.save()
 
     def do_show(self, arg):
         """Prints the string representation of an instance
@@ -123,7 +124,6 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
         else:
             instance = inst_dict[args[0] + "." + args[1]]
-            instance.updated_at = datetime.now()
             setattr(instance, args[2], args[3].replace('"', ''))
             storage.save()
 
