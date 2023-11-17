@@ -16,15 +16,7 @@ class HBNBCommand(cmd.Cmd):
     """Class HBNBCommand that inherits from cmd.Cmd"""
 
     prompt = "(hbnb) "
-    classes = {
-        "BaseModel",
-        "User",
-        "State",
-        "City",
-        "Amenity",
-        "Place",
-        "Review"
-        }
+    classes = {"BaseModel", "User", "State", "City", "Amenity", "Place", "Review"}
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -124,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
         else:
             instance = inst_dict[args[0] + "." + args[1]]
-            setattr(instance, args[2], args[3].replace('"', ''))
+            setattr(instance, args[2], args[3].replace('"', ""))
             storage.save()
 
 

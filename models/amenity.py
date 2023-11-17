@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 
 class Amenity(BaseModel):
     """Amenity Class that inherit from BaseModel Class"""
+
     name = ""
 
     def __str__(self):
