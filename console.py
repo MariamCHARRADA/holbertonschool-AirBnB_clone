@@ -16,14 +16,14 @@ class HBNBCommand(cmd.Cmd):
     """Class HBNBCommand that inherits from cmd.Cmd"""
 
     prompt = "(hbnb) "
-    classes = {
+    classes = [
         "BaseModel",
         "User",
         "State",
         "City",
         "Amenity",
         "Place",
-        "Review"}
+        "Review"]
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -126,7 +126,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             instance = inst_dict[args[0] + "." + args[1]]
             instance.updated_at = datetime.now()
-
             setattr(instance, args[2], args[3].replace('"', ''))
             storage.save()
 
