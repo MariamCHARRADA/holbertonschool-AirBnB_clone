@@ -25,6 +25,7 @@
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
+    display: inline-block;
 }
 .filters .amenities {
     height: 100%;
@@ -33,8 +34,13 @@
 }
 .filters h3 {
     font-weight: 600;
+    margin-left: 50px;
+    margin-bottom: 0;
 }
 .filters h4 {
     font-weight: 400;
     font-size: 14px;
+    margin-left: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
