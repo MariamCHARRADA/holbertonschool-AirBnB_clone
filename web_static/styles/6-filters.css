@@ -5,15 +5,19 @@
 
 .filters .popover {
     display: none;
-    position: absolute;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #FAFAFA;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
+    margin-top: 19px;
 }
 
 .filters .popover h2 {
     font-size: 16px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .filters .popover ul {
@@ -21,5 +25,6 @@
 }
 
 .filters .popover li {
-    padding: ;
+
+    list-style: none;
 }
